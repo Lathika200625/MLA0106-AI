@@ -148,6 +148,31 @@ Minimax(node, depth, isMaxPlayer):
 
         return bestValue
 
+ALPHA BETA SEARCH:-
+ALPHA_BETA(node, depth, alpha, beta, isMax):
+
+    if terminal(node) OR depth == 0:
+        return heuristic(node)
+
+    if isMax:
+        value = -∞
+        for child in children(node):
+            value = max(value,
+                        ALPHA_BETA(child, depth-1, alpha, beta, false))
+            alpha = max(alpha, value)
+            if alpha >= beta:
+                break       // beta cut-off
+        return value
+
+    else:
+        value = +∞
+        for child in children(node):
+            value = min(value,
+                        ALPHA_BETA(child, depth-1, alpha, beta, true))
+            beta = min(beta, value)
+            if beta <= alpha:
+                break       // alpha cut-off
+        return value
                 
 
 
