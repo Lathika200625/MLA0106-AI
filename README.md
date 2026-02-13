@@ -90,4 +90,37 @@ A* SEARCH:-
     c. Expand neighbors
     d. Update g(n) and f(n)
 
+WATER JUG SEARCH:-
+WaterJugProblem(Capacity1, Capacity2, Target):
+
+    create empty queue Q
+    create VISITED set
+
+    initial_state = (0, 0)
+    enqueue initial_state into Q
+    mark initial_state as visited
+
+    while Q is not empty:
+
+        (x, y) = dequeue Q
+
+        if x == Target OR y == Target:
+            print solution
+            stop
+
+        generate next possible states:
+
+            1. Fill Jug1 → (Capacity1, y)
+            2. Fill Jug2 → (x, Capacity2)
+            3. Empty Jug1 → (0, y)
+            4. Empty Jug2 → (x, 0)
+            5. Pour Jug1 → Jug2
+            6. Pour Jug2 → Jug1
+
+        for each new_state:
+            if new_state not visited:
+                enqueue new_state into Q
+                mark new_state as visited
+                
+
 
