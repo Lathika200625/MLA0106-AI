@@ -123,7 +123,30 @@ WaterJugProblem(Capacity1, Capacity2, Target):
                 mark new_state as visited
 
 MIN-MAX SEARCH:-
+Minimax(node, depth, isMaxPlayer):
 
+    if node is terminal OR depth == 0:
+        return value(node)
+
+    if isMaxPlayer:
+
+        bestValue = -∞
+
+        for each child of node:
+            value = Minimax(child, depth - 1, false)
+            bestValue = max(bestValue, value)
+
+        return bestValue
+
+    else:
+
+        bestValue = +∞
+
+        for each child of node:
+            value = Minimax(child, depth - 1, true)
+            bestValue = min(bestValue, value)
+
+        return bestValue
 
                 
 
