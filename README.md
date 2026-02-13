@@ -121,6 +121,7 @@ WaterJugProblem(Capacity1, Capacity2, Target):
             if new_state not visited:
                 enqueue new_state into Q
                 mark new_state as visited
+
                 
 
 
