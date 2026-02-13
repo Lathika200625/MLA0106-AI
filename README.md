@@ -58,4 +58,26 @@ UCS(Graph, Start, Goal):
                 parent(N) = Current
                 insert N into PQ
 
+GREEDY BREATH FIRST SEARCH (GBFS):-
+GBFS(Graph, Start, Goal):
+
+    create OPEN priority queue (based on heuristic h(n))
+    create CLOSED set
+
+    insert Start into OPEN
+
+    while OPEN not empty:
+
+        Current = extract node with minimum h(n)
+
+        if Current == Goal:
+            stop
+
+        move Current to CLOSED
+
+        for each neighbor N of Current:
+            if N not in CLOSED:
+                parent(N) = Current
+                insert N into OPEN
+
 
