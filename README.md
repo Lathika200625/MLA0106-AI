@@ -80,4 +80,14 @@ GBFS(Graph, Start, Goal):
                 parent(N) = Current
                 insert N into OPEN
 
+A* SEARCH:-
+1. Insert Start node into OPEN
+2. Compute f(n) = g(n) + h(n)
+3. Repeat until Goal reached:
+
+    a. Select node with smallest f(n)
+    b. If Goal → Stop
+    c. Expand neighbors
+    d. Update g(n) and f(n)
+
 
