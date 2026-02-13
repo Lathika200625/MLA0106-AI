@@ -122,7 +122,8 @@ WaterJugProblem(Capacity1, Capacity2, Target):
                 enqueue new_state into Q
                 mark new_state as visited
 
-WATER JUG SEARCH:                
+MIN-MAX SEARCH:-
+
 
                 
 
