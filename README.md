@@ -9,7 +9,7 @@ BFS(Graph, S):
         print V
 
         for each neighbor U of V:
-            if U not visited:
+        if U not visited:
                 mark U as visited
                 enqueue U into Q
 
